@@ -6,6 +6,29 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
+    <script>
+      window.onload = () => {
+        // CLICK EVENT FOR MENU HAMBURGER
+        const mobileMenuIcon = document.getElementById("mobile-menu-button");
+        mobileMenuIcon.addEventListener("click", () => {
+          if (mobileMenuIcon.classList.contains("open")) {
+            mobileMenuIcon.classList.remove("open");
+          } else {
+            mobileMenuIcon.classList.add("open");
+          }
+        });
+
+        // CLECK EVENT FOR MOBILE TICKET LINK SUBMENU
+        const ticketMenuItem = document.getElementById("ticket-menu-item");
+        ticketMenuItem.addEventListener("click", () => {
+          if (ticketMenuItem.classList.contains("open")) {
+            ticketMenuItem.classList.remove("open");
+          } else {
+            ticketMenuItem.classList.add("open");
+          }
+        });
+      };
+    </script>
   </head>
   <body>
     <main>
@@ -13,43 +36,113 @@
         <nav
           class="sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500"
         >
-          <!-- LEFT NAV CONTENT -->
+          <!-- LOGO NAV STARTS -->
           <div class="flex items-center p-2 gap-2">
             <image src="./assets/images/logo-inverted.png" width="50" />
             <div class="text-2xl font-bold">
               tw:<span class="text-sky-900">mf</span>
             </div>
           </div>
-          <!-- RIGHT NAV CONTENT -->
-          <div class="flex-1 flex items-center justify-end">
-            <!-- HOME LINK  -->
+          <!-- LOGO NAV ENDS -->
+          <!-- MOBILE NAV STARTS -->
+          <div class="block md:hidden ml-auto pr-4 cursor-pointer my-auto">
+            <!-- BURGER ICON STARTS -->
+            <div id="mobile-menu-button" class="group peer">
+              <div
+                class="top-0 h-1 w-8 rounded-full bg-zinc-200 group-open:rotate-45 transition-all group-open:top-2 relative"
+              ></div>
+              <div
+                class="transition-all opacity-100 group-open:opacity-0 h-1 w-8 rounded-full bg-zinc-200 mt-1"
+              ></div>
+              <div
+                class="top-0 transition-all group-open:-rotate-45 h-1 w-8 rounded-full bg-zinc-200 mt-1 group-open:-top-2 relative"
+              ></div>
+            </div>
+            <!-- BURGER ICON ENDS -->
+            <!-- MOBILE MENU STARTS -->
             <div
-              class="menu-item"
+              class="peer-open:peer-open:block hidden absolute md:hidden top-[62px] w-full bg-gradient-to-r from-rose-500 to-pink-500 left-0"
             >
+            <!-- MOBILE HOME LINK STARTS -->
+              <div
+                class="mobile-menu-item p-4 font-bold flex items-center justify-center"
+              >
+                <span>Home</span>
+              </div>
+              <!-- MOBILE HOME LINK ENDS -->
+              <!-- MOBILE LINEUP LINK STARTS -->
+              <div
+                class="mobile-menu-item p-4 font-bold flex items-center justify-center"
+              >
+                <span>Lineup</span>
+              </div>
+              <!-- MOBILE LINEUP LINK ENDS -->
+              <!-- MOBILE TICKETS LINK STARTS -->
+              <div
+                class="group mobile-menu-item" id="ticket-menu-item"
+              >
+                <div class="p-4 text-center font-bold">Tickets</div>
+                <div class="hidden group-open:block">
+                  <div class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
+                    <span>Single day ticket</span>
+                  </div>
+                  <div class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
+                    <span>7 day ticket</span>
+                  </div>
+                </div>
+              </div>
+              <!-- MOBILE TICKETS LINK ENDS -->
+              <!-- MOBILE SUPPORT LINK STARTS -->
+              <div
+                class="mobile-menu-item p-4 font-bold flex items-center justify-center"
+              >
+                <span>Support</span>
+              </div>
+              <!-- MOBILE SUPPORT LINK ENDS -->
+            </div>
+            <!-- MOBILE MENU ENDS -->
+          </div>
+          <!-- MOBILE NAV ENDS -->
+          <!-- DESKTOP NAV STARTS -->
+          <div class="flex-1 md:flex hidden items-center justify-end">
+            <!-- HOME LINK STARTS -->
+            <div class="menu-item">
               <span>Home</span>
             </div>
-            <!-- LINEUP LINK  -->
-            <div
-              class="menu-item"
-            >
+            <!-- HOME LINK ENDS -->
+            <!-- LINEUP LINK STARTS -->
+            <div class="menu-item">
               <span>Lineup</span>
             </div>
-            <!-- TICKETS LINK  -->
-            <div
-              class="menu-item"
-            >
+            <!-- LINEUP LINK ENDS -->
+            <!-- TICKETS LINK STARTS  -->
+            <div class="menu-item group">
               <span>Tickets</span>
-              <div class="absolute top-full right-0 whitespace-nowrap rounded-b-md bg-pink-500 text-right">
-                <div><span>Single day ticket</span></div>
-                <div><span>7 day ticket</span></div>
+              <!-- TICKET LINK SUB MENU STARTS -->
+              <div
+                class="absolute group-hover:block hidden top-full right-0 whitespace-nowrap rounded-b-md bg-pink-500 text-right"
+              >
+                <div
+                  class="p-4 font-bold cursor-pointer hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out text-pink-200"
+                >
+                  <span>Single day ticket</span>
+                </div>
+                <div
+                  class="p-4 font-bold cursor-pointer hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out text-pink-200"
+                >
+                  <span>7 day ticket</span>
+                </div>
+              </div>
+              <!-- TICKET LINK SUB MENU ENDS -->
             </div>
-            <!-- SUPPORT LINK  -->
-            <div
-              class="menu-item"
-            >
+            <!-- TICKETS LINK ENDS  -->
+            <!-- SUPPORT LINK STARTS  -->
+            <div class="menu-item">
               <span>Support</span>
             </div>
+            <!-- SUPPORT LINK ENDS  -->
           </div>
+          <!-- DESKTOP NAV ENDSS -->
         </nav>
       </header>
     </main>

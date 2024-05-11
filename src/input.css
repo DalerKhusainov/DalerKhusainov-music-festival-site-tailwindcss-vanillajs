@@ -13,4 +13,7 @@
   .menu-item {
     @apply relative flex h-full cursor-pointer items-center p-4 font-bold text-pink-200 transition-colors ease-in-out hover:bg-white/10 hover:text-zinc-200;
   }
+  .mobile-menu-item {
+    @apply relative h-full cursor-pointer text-pink-200 hover:text-zinc-200 transition-colors ease-in-out hover:bg-white/10;
+  }
 }
