@@ -1,0 +1,25 @@
+{
+  "name": "dalerkhusainov-music-festival-site-tailwindcss-vanillajs",
+  "version": "1.0.0",
+  "description": "Project Music Festival Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw:build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DalerKhusainov/DalerKhusainov-music-festival-site-tailwindcss-vanillajs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DalerKhusainov/DalerKhusainov-music-festival-site-tailwindcss-vanillajs/issues"
+  },
+  "homepage": "https://github.com/DalerKhusainov/DalerKhusainov-music-festival-site-tailwindcss-vanillajs#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
+
+
