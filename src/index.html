@@ -34,59 +34,64 @@
     <main>
       <header class="text-zinc-200">
         <nav
-          class="sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500"
+          class="sticky top-0 z-10 flex bg-gradient-to-r from-rose-500 to-pink-500"
         >
           <!-- LOGO NAV STARTS -->
-          <div class="flex items-center p-2 gap-2">
-            <image src="./assets/images/logo-inverted.png" width="50" />
+          <div class="flex items-center gap-2 p-2">
+            <img src="./assets/images/logo-inverted.png" width="50" />
             <div class="text-2xl font-bold">
               tw:<span class="text-sky-900">mf</span>
             </div>
           </div>
           <!-- LOGO NAV ENDS -->
           <!-- MOBILE NAV STARTS -->
-          <div class="block md:hidden ml-auto pr-4 cursor-pointer my-auto">
+          <div class="block pr-4 my-auto ml-auto cursor-pointer md:hidden">
             <!-- BURGER ICON STARTS -->
             <div id="mobile-menu-button" class="group peer">
               <div
-                class="top-0 h-1 w-8 rounded-full bg-zinc-200 group-open:rotate-45 transition-all group-open:top-2 relative"
+                class="relative top-0 w-8 h-1 transition-all rounded-full bg-zinc-200 group-open:rotate-45 group-open:top-2"
               ></div>
               <div
-                class="transition-all opacity-100 group-open:opacity-0 h-1 w-8 rounded-full bg-zinc-200 mt-1"
+                class="w-8 h-1 mt-1 transition-all rounded-full opacity-100 group-open:opacity-0 bg-zinc-200"
               ></div>
               <div
-                class="top-0 transition-all group-open:-rotate-45 h-1 w-8 rounded-full bg-zinc-200 mt-1 group-open:-top-2 relative"
+                class="relative top-0 w-8 h-1 mt-1 transition-all rounded-full group-open:-rotate-45 bg-zinc-200 group-open:-top-2"
               ></div>
             </div>
             <!-- BURGER ICON ENDS -->
             <!-- MOBILE MENU STARTS -->
             <div
-              class="peer-open:peer-open:block hidden absolute md:hidden top-[62px] w-full bg-gradient-to-r from-rose-500 to-pink-500 left-0"
+              class="peer-open:block hidden absolute md:hidden top-[62px] w-full bg-gradient-to-r from-rose-500 to-pink-500 left-0"
             >
-            <!-- MOBILE HOME LINK STARTS -->
+              <!-- MOBILE HOME LINK STARTS -->
               <div
-                class="mobile-menu-item p-4 font-bold flex items-center justify-center"
+                class="relative flex items-center justify-center h-full p-4 font-bold text-pink-200 transition-colors cursor-pointer hover:bg-white/10 hover:text-zinc-200"
               >
                 <span>Home</span>
               </div>
               <!-- MOBILE HOME LINK ENDS -->
               <!-- MOBILE LINEUP LINK STARTS -->
               <div
-                class="mobile-menu-item p-4 font-bold flex items-center justify-center"
+                class="relative flex items-center justify-center h-full p-4 font-bold text-pink-200 transition-colors cursor-pointer hover:bg-white/10 hover:text-zinc-200"
               >
                 <span>Lineup</span>
               </div>
               <!-- MOBILE LINEUP LINK ENDS -->
               <!-- MOBILE TICKETS LINK STARTS -->
               <div
-                class="group mobile-menu-item" id="ticket-menu-item"
+                class="relative h-full text-pink-200 transition-colors cursor-pointer group hover:bg-white/10 hover:text-zinc-200"
+                id="ticket-menu-item"
               >
-                <div class="p-4 text-center font-bold">Tickets</div>
+                <div class="p-4 font-bold text-center">Tickets</div>
                 <div class="hidden group-open:block">
-                  <div class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
+                  <div
+                    class="relative p-4 text-center text-pink-200 transition-colors ease-in-out hover:text-zinc-200 hover:bg-white/5"
+                  >
                     <span>Single day ticket</span>
                   </div>
-                  <div class="text-center p-4 relative text-pink-200 hover:text-zinc-200 hover:bg-white/5 transition-colors ease-in-out">
+                  <div
+                    class="relative p-4 text-center text-pink-200 transition-colors ease-in-out hover:text-zinc-200 hover:bg-white/5"
+                  >
                     <span>7 day ticket</span>
                   </div>
                 </div>
@@ -94,7 +99,7 @@
               <!-- MOBILE TICKETS LINK ENDS -->
               <!-- MOBILE SUPPORT LINK STARTS -->
               <div
-                class="mobile-menu-item p-4 font-bold flex items-center justify-center"
+                class="relative flex items-center justify-center h-full p-4 font-bold text-pink-200 transition-colors cursor-pointer hover:bg-white/10 hover:text-zinc-200"
               >
                 <span>Support</span>
               </div>
@@ -104,7 +109,7 @@
           </div>
           <!-- MOBILE NAV ENDS -->
           <!-- DESKTOP NAV STARTS -->
-          <div class="flex-1 md:flex hidden items-center justify-end">
+          <div class="items-center justify-end flex-1 hidden md:flex">
             <!-- HOME LINK STARTS -->
             <div class="menu-item">
               <span>Home</span>
@@ -120,15 +125,15 @@
               <span>Tickets</span>
               <!-- TICKET LINK SUB MENU STARTS -->
               <div
-                class="absolute group-hover:block hidden top-full right-0 whitespace-nowrap rounded-b-md bg-pink-500 text-right"
+                class="absolute right-0 hidden text-right bg-pink-500 group-hover:block top-full whitespace-nowrap rounded-b-md"
               >
                 <div
-                  class="p-4 font-bold cursor-pointer hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out text-pink-200"
+                  class="p-4 font-bold text-pink-200 transition-colors ease-in-out cursor-pointer hover:bg-white/5 hover:text-zinc-200"
                 >
                   <span>Single day ticket</span>
                 </div>
                 <div
-                  class="p-4 font-bold cursor-pointer hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out text-pink-200"
+                  class="p-4 font-bold text-pink-200 transition-colors ease-in-out cursor-pointer hover:bg-white/5 hover:text-zinc-200"
                 >
                   <span>7 day ticket</span>
                 </div>
@@ -144,7 +149,91 @@
           </div>
           <!-- DESKTOP NAV ENDSS -->
         </nav>
+        <!-- SECTION HERO STARTS -->
+        <section
+          style="background-image: url('./assets/images/hero.jpg')"
+          class="bg-cover bg-center text-zinc-200 bg-fixed flex flex-col items-center justify-center h-[calc(100vh_-_200px)] min-h-[400px]"
+          id="hero-section"
+        >
+          <!-- SECTION HERO LOGO STARTS -->
+          <div
+            class="px-4 py-2 text-center bg-white/10 rounded-xl backdrop-blur-md"
+          >
+            <!-- HERO LOGO IMAGE STARTS -->
+            <div class="relative">
+              <img src="./assets/images/logo.png" width="175" alt="Logo" />
+              <!--  PINK CYRCLE & BARS WRAPPER STARTS -->
+              <div class="flex items-center justify-center mt-[-70px] mb-5">
+                <!-- PINK CYRCLE STARTS -->
+                <div
+                  class="flex items-center justify-center gap-1 bg-pink-500 rounded-full h-14 w-14"
+                >
+                  <!-- BAR 1 -->
+                  <div
+                    class="w-1 h-2 bg-pink-300 rounded-full animate-wavey"
+                  ></div>
+                  <!-- BAR 2 -->
+                  <div
+                    class="w-1 h-3 bg-pink-200 rounded-full animate-wavey animation-delay-200"
+                  ></div>
+                  <!-- BAR 3 -->
+                  <div
+                    class="w-1 h-4 bg-pink-100 rounded-full animate-wavey animation-delay-[150ms]"
+                  ></div>
+                  <!-- BAR 4 -->
+                  <div
+                    class="w-1 h-3 bg-pink-200 rounded-full animate-wavey animation-delay-300"
+                  ></div>
+                  <!-- BAR 5 -->
+                  <div
+                    class="w-1 h-2 bg-pink-300 rounded-full animate-wavey animation-delay-[75ms]"
+                  ></div>
+                </div>
+                <!-- PINK CYRCLE ENDS -->
+              </div>
+              <!-- PINK CYRCLE & BARS WRAPPER ENDS -->
+            </div>
+            <!-- HERO LOGO IMAGE ENDS -->
+            <!-- HERO LOGO TEXT STARTS -->
+            <div class="text-5xl font-bold">
+              tw:<span class="text-sky-900">mf</span>
+            </div>
+            <!-- HERO LOGO TEXT ENDS -->
+          </div>
+          <!-- SECTION HERO LOGO ENDS -->
+          <!-- HERO FORM TEXT STARTS -->
+          <div class="mt-3 text-sm font-bold">
+            Keep me updated with news and promotions
+          </div>
+          <!-- HERO FORM TEXT ENDS -->
+          <!-- HERO FORM FIELD STARTS -->
+          <form class="flex gap-3 mt-3">
+            <input
+              placeholder="Email"
+              type="email"
+              class="p-2 font-bold border rounded-sm border-white/40 bg-white/30 backdrop-blur-md text-sky-900 placeholder-zinc-500 caret-pink-500 outline-pink-500 focus:outline"
+            />
+            <button
+              type="submit"
+              class="px-4 py-2 font-bold transition-colors bg-pink-500 rounded-sm hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20"
+            >
+              Subscribe
+            </button>
+          </form>
+          <!-- HERO FORM FIELD ENDS -->
+        </section>
+        <!-- SECTION HERO ENDS -->
       </header>
+      <!-- SLIDER SECTION STARTS -->
+      <div class="max-w-screen-lg mx-auto mt-20">
+        <h2>Headliners</h2>
+        <p>
+          Experience the sonic delight from these made-up artists across 7 days
+          that music fans are calling “one of the many gigs that will happen
+          this year”
+        </p>
+      </div>
+      <!-- SLIDER SECTION ENDS -->
     </main>
   </body>
 </html>
