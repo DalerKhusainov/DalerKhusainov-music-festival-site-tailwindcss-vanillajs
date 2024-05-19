@@ -749,12 +749,12 @@ h6{
   margin-top: 1rem;
 }
 
-.mt-\[-70px\]{
-  margin-top: -70px;
-}
-
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.mt-\[-70px\]{
+  margin-top: -70px;
 }
 
 .block{
@@ -851,6 +851,14 @@ h6{
 
 .grow{
   flex-grow: 1;
+}
+
+.caption-top{
+  caption-side: top;
+}
+
+.caption-bottom{
+  caption-side: bottom;
 }
 
 .border-collapse{
@@ -1052,8 +1060,17 @@ h6{
   padding: 0.5rem;
 }
 
+.p-3{
+  padding: 0.75rem;
+}
+
 .p-4{
   padding: 1rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-4{
@@ -1095,6 +1112,11 @@ h6{
 .text-5xl{
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm{
@@ -1213,6 +1235,14 @@ h6{
 
 .animation-delay-\[75ms\]{
   animation-delay: 75ms;
+}
+
+.caption-bottom{
+  caption-side: bottom;
+}
+
+.caption-top{
+  caption-side: top;
 }
 
 .hover\:bg-sky-900:hover{
