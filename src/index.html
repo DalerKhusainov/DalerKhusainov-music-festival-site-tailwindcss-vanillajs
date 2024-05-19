@@ -10,6 +10,7 @@
       window.onload = () => {
         // CLICK EVENT FOR MENU HAMBURGER
         const mobileMenuIcon = document.getElementById("mobile-menu-button");
+
         mobileMenuIcon.addEventListener("click", () => {
           if (mobileMenuIcon.classList.contains("open")) {
             mobileMenuIcon.classList.remove("open");
@@ -20,6 +21,7 @@
 
         // CLECK EVENT FOR MOBILE TICKET LINK SUBMENU
         const ticketMenuItem = document.getElementById("ticket-menu-item");
+
         ticketMenuItem.addEventListener("click", () => {
           if (ticketMenuItem.classList.contains("open")) {
             ticketMenuItem.classList.remove("open");
@@ -27,12 +29,45 @@
             ticketMenuItem.classList.add("open");
           }
         });
+
+        // CLICK EVENT FOR CAROUSEL ARROWS
+        const previuosButton = document.getElementById("previous");
+        const nextButton = document.getElementById("next");
+        const carousel = document.getElementById("carousel");
+
+        previuosButton.addEventListener("click", () => {
+          const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
+          carousel.scrollLeft = carousel.scrollLeft - itemWidth;
+        });
+
+        nextButton.addEventListener("click", () => {
+          const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
+          carousel.scrollLeft = carousel.scrollLeft + itemWidth;
+        });
+
+        // CLICK EVENT FOR DARK MODE TOGGLE
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+        darkModeToggle.addEventListener("click", () => {
+          if (document.body.classList.contains("dark")) {
+            document.body.classList.remove("dark");
+          } else {
+            document.body.classList.add("dark");
+          }
+        });
       };
     </script>
   </head>
-  <body>
-    <main>
+  <body class="dark">
+    <main class="bg-zinc-200 dark:bg-zinc-900">
       <header class="text-zinc-200">
+        <div
+          id="dark-mode-toggle"
+          class="fixed right-0 inline-block w-12 p-2 text-3xl rounded-l-lg cursor-pointer bg-zinc-900 top-24 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900"
+        >
+          <i class="fas fa-sun dark:hidden"></i>
+          <i class="hidden fas fa-moon dark:inline"></i>
+        </div>
         <nav
           class="sticky top-0 z-10 flex bg-gradient-to-r from-rose-500 to-pink-500"
         >
@@ -225,15 +260,114 @@
         <!-- SECTION HERO ENDS -->
       </header>
       <!-- SLIDER SECTION STARTS -->
-      <div class="max-w-screen-lg mx-auto mt-20">
+      <section
+        id="section-slider"
+        class="max-w-screen-lg p-4 mx-auto mt-20 text-zinc-900 dark:text-zinc-200"
+      >
         <h2>Headliners</h2>
         <p>
           Experience the sonic delight from these made-up artists across 7 days
           that music fans are calling “one of the many gigs that will happen
           this year”
         </p>
-      </div>
+        <div class="flex">
+          <!-- ARROW LEFT STARTS -->
+          <div
+            id="previous"
+            class="relative flex items-center justify-center p-2 text-5xl cursor-pointer -top-8"
+          >
+            <i class="fas fa-angle-left"></i>
+          </div>
+          <!-- ARROW LEFT ENDS -->
+          <!-- CAROUSEL SLIDER STARTS -->
+          <div
+            id="carousel"
+            class="flex flex-1 w-full gap-4 pb-5 mt-4 overflow-x-auto scroll-smooth snap-x snap-mandatory"
+          >
+            <!-- Slide 1 -->
+            <div class="min-w-[80%] snap-center md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/band1.jpg')"
+                class="w-full bg-center bg-cover shadow-md h-80 snap-center rounded-xl shadow-black/20"
+              ></div>
+              <h5 class="mt-2">Corduroy Gary</h5>
+              <h6>1st July 9pm - Main Stage</h6>
+            </div>
+            <!-- Slide 2 -->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/band2.jpg')"
+                class="w-full bg-center bg-cover shadow-md h-80 snap-center rounded-xl shadow-black/20"
+              ></div>
+              <h5 class="mt-2">Corduroy Gary</h5>
+              <h6>1st July 9pm - Main Stage</h6>
+            </div>
+            <!-- Slide 3-->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/band3.jpg')"
+                class="w-full bg-center bg-cover shadow-md h-80 snap-center rounded-xl shadow-black/20"
+              ></div>
+              <h5 class="mt-2">Corduroy Gary</h5>
+              <h6>1st July 9pm - Main Stage</h6>
+            </div>
+            <!-- Slide 4 -->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/band4.jpg')"
+                class="w-full bg-center bg-cover shadow-md h-80 snap-center rounded-xl shadow-black/20"
+              ></div>
+              <h5 class="mt-2">Corduroy Gary</h5>
+              <h6>1st July 9pm - Main Stage</h6>
+            </div>
+            <!-- Slide 5 -->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/band5.jpg')"
+                class="w-full bg-center bg-cover shadow-md h-80 snap-center rounded-xl shadow-black/20"
+              ></div>
+              <h5 class="mt-2">Corduroy Gary</h5>
+              <h6>1st July 9pm - Main Stage</h6>
+            </div>
+            <!-- Slide 6 -->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/band6.jpg')"
+                class="w-full bg-center bg-cover shadow-md h-80 snap-center rounded-xl shadow-black/20"
+              ></div>
+              <h5 class="mt-2">Corduroy Gary</h5>
+              <h6>1st July 9pm - Main Stage</h6>
+            </div>
+            <!-- Slide 7 -->
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/band7.jpg')"
+                class="w-full bg-center bg-cover shadow-md h-80 snap-center rounded-xl shadow-black/20"
+              ></div>
+              <h5 class="mt-2">Corduroy Gary</h5>
+              <h6>1st July 9pm - Main Stage</h6>
+            </div>
+          </div>
+          <!-- CAROUSEL SLIDER ENDS -->
+          <!-- ARROW LEFT STARTS -->
+          <div
+            id="next"
+            class="relative flex items-center justify-center p-2 text-5xl cursor-pointer -top-8"
+          >
+            <i class="fas fa-angle-right"></i>
+          </div>
+          <!-- ARROW LEFT ENDS -->
+        </div>
+      </section>
       <!-- SLIDER SECTION ENDS -->
+      <!-- SECTION TABLE STARTS -->
+      <section id="section-table">
+        <h2 class="mt-20">Table</h2>
+        <table class="table w-full mt-5 border border-collapse border-zinc-500">
+          
+        </table>
+      </section>
+      <!-- SECTION TABLE ENDS -->
     </main>
   </body>
 </html>
