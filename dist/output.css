@@ -638,9 +638,9 @@ h6{
   border-radius: 0.5rem;
 }
 
-.btn-\[\#000\]{
-  background-color: #000;
-  color: white;
+.btn-rose-500{
+  background-color: #f43f5e;
+  color: black;
 }
 
 .menu-item{
@@ -781,6 +781,10 @@ h6{
 
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
 }
 
 .mt-\[-70px\]{

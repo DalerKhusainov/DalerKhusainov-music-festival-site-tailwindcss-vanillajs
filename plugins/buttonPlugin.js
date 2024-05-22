@@ -8,17 +8,20 @@ const buttonPlugin = plugin(function ({
 }) {
   console.log(theme("spacing")["0.5"]); // 0.125
 
+  // Step 1: Define the base button styles
+  // <div class="btn">Order now</div>  <== RESULT
   addComponents({
     ".btn": {
       display: "inline-block",
       cursor: "pointer",
       fontWeight: "bold",
-      // padding: `${theme("spacing")["0.5"]} ${theme("spacing")["4"]}`, // Method 1
-      padding: `${theme("spacing.2")} ${theme("spacing.4")}`, // Method 2
+      padding: `${theme("spacing.2")} ${theme("spacing.4")}`, // Using theme config directly
       borderRadius: theme("borderRadius").lg,
     },
   });
 
+  // Step 2: Generate styles for different button colors using theme colors
+  // <div class="btn btn-rose-500">Order now</div>  <== RESULT
   for (let key in theme("colors")) {
     if (typeof theme("colors")[key] !== "string") {
       for (let shade in theme("colors")[key]) {
@@ -33,6 +36,8 @@ const buttonPlugin = plugin(function ({
     }
   }
 
+  // Step 3: Match components based on their value
+  // <div class="btn btn-[#000]">Order now</div>  <== RESULT
   matchComponents({
     btn: (value) => {
         return {
@@ -44,3 +49,7 @@ const buttonPlugin = plugin(function ({
 });
 
 module.exports = buttonPlugin;
+
+
+
+
