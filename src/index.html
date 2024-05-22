@@ -63,7 +63,7 @@
       <header class="text-zinc-200">
         <div
           id="dark-mode-toggle"
-          class="fixed right-0 inline-block w-12 p-2 text-3xl rounded-l-lg cursor-pointer bg-zinc-900 top-24 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900"
+          class="fixed right-0 z-10 inline-block w-12 p-2 text-3xl rounded-l-lg cursor-pointer bg-zinc-900 top-24 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900"
         >
           <i class="fas fa-sun dark:hidden"></i>
           <i class="hidden fas fa-moon dark:inline"></i>
@@ -360,9 +360,61 @@
         </div>
       </section>
       <!-- SLIDER SECTION ENDS -->
+      <!-- TIME LINE SECTION STARTS -->
+      <section id="section-timeline" class="max-w-screen-lg p-4 mx-auto mt-20 text-zinc-900 dark:text-zinc-200">
+        <h2 class="mt-20">Lineup</h2>
+        <p>Follow the timetable and stage to ensure you don't miss your favourite artists</p>
+        <!-- TIME LINE FIELD STARTS -->
+        <div class="relative px-2 py-4 mt-5 rounded-lg bg-zinc-800 text-zinc-200">
+          <!-- TIME LINE INDECATOR STARTS -->
+          <div class="absolute top-0 w-4 h-full -ml-2 rounded-full left-1/2 bg-gradient-to-b from-sky-900 via-cyan-900 to-teal-900">
+            <div class="sticky top-1/2">
+              <div class="relative w-4 h-4">
+                <div  class="absolute w-4 h-4 bg-pink-500 rounded-full opacity-75 animate-ping"></div>
+                <div class="relative w-4 h-4 rounded-full bg-rose-500"></div>
+              </div>
+            </div>
+          </div>
+          <!-- TIME LINE INDECATOR ENDS -->
+          <!--  -->
+          <div class="grid grid-cols-2 gap-8">
+            <div>
+              <h4 class="p-2 my-4 rounded-lg bg-zinc-900">1st July</h4>
+            </div>
+            <div></div>
+            <div class="text-right">
+              <div class="font-bold">Jackie Chaston</div>
+              <div class="text-zinc-400">6pm - Sage Stage</div>
+            </div>
+            <div></div>
+            <div></div>
+            <div>
+              <div class="font-bold">Jackie Chaston</div>
+              <div class="text-zinc-400">6pm - Sage Stage</div>
+            </div>
+            <div>
+              <h4 class="p-2 my-4 rounded-lg bg-zinc-900">1st July</h4>
+            </div>
+            <div></div>
+            <div class="text-right">
+              <div class="font-bold">Jackie Chaston</div>
+              <div class="text-zinc-400">6pm - 5age Stage</div>
+            </div>
+            <div></div>
+            <div></div>
+            <div>
+              <div class="font-bold">Jackie Chaston</div>
+              <div class="text-zinc-400">6pm - 5age Stage</div>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <!-- TIME LINE FIELD ENDS -->
+      </section>
+      <!-- TIME LINE SECTION ENDS -->
       <!-- SECTION TABLE STARTS -->
       <section id="section-table" class="max-w-screen-lg p-4 mx-auto mt-20 text-zinc-900 dark:text-zinc-200">
-        <h2 class="mt-20">Table</h2>
+        <h2 class="mt-20">Tickets</h2>
         <table class="table w-full mt-5 border border-collapse border-zinc-500">
           <thead class="text-lg font-bold">
             <td class="p-3 border border-zinc-500">Tickets</td>
@@ -378,11 +430,14 @@
               <td class="px-3 py-2 border border-zinc-500">100$</td>
             </tr>
           </tbody>
-          <caption class="caption-bottom">Once they're gone, they're gone!</caption>
+          <caption class="mt-2 caption-bottom">Once they're gone, they're gone!</caption>
         </table>
       </section>
       <!-- SECTION TABLE ENDS -->
     </main>
+    <div class="btn-[#000] btn">
+      Some Button
+    </div>
   </body>
 </html>
 
